@@ -24,7 +24,7 @@ public class ReceitaMedica {
     @Column(name = "nm_medicamento", nullable = false, length = 100)
     private String nome;
 
-    @Column(name = "ds_dosagem", nullable = false, precision = 10, scale = 2)
+    @Column(name = "ds_dosagem", nullable = false)
     private Double dosagem;
 
     @Column(name = "ds_instrucao_uso", nullable = false, length = 200)

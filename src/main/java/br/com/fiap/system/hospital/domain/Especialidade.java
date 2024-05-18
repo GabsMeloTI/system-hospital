@@ -24,10 +24,9 @@ public class Especialidade {
     private Long id;
 
     @Column(name = "nm_especialidade")
-    private Long nome;
+    private String nome;
 
-    @ManyToOne
-    @JoinColumn(name = "cd_consulta")
+    @OneToOne(mappedBy = "especialidade")
     private Consultas consulta;
 
     @ManyToOne

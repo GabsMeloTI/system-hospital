@@ -42,8 +42,9 @@ public class Consultas {
     @JoinColumn(name = "cd_medico")
     private Medicos medico;
 
-    @OneToMany(mappedBy = "consulta")
-    private List<Especialidade> especialidade;
+    @OneToOne
+    @JoinColumn(name = "cd_especialidade")
+    private Especialidade especialidade;
 
     @OneToMany(mappedBy = "consulta")
     private List<ReceitaMedica> receitaMedicas;
