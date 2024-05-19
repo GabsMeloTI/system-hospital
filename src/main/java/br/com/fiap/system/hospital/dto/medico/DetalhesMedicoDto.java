@@ -7,10 +7,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record DetalhesMedicoDto(Long id, String nome, String telefone, String email, List<DetalhesEspecialidadeDto> especialidade) {
+public record DetalhesMedicoDto(Long id, String nome, String telefone, String email, DetalhesEspecialidadeDto especialidade) {
     public DetalhesMedicoDto(Medicos medicos) {
-        this(medicos.getId(), medicos.getNome(), medicos.getTelefone(), medicos.getEmail(),
-                medicos.getEspecialidades().stream().map(DetalhesEspecialidadeDto::new).collect(Collectors.toList())
-        );
+        this(medicos.getId(), medicos.getNome(), medicos.getTelefone(), medicos.getEmail(), new DetalhesEspecialidadeDto(medicos.getEspecialidade()));
     }
 }

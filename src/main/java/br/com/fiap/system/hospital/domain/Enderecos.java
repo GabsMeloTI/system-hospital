@@ -1,5 +1,7 @@
 package br.com.fiap.system.hospital.domain;
 
+import br.com.fiap.system.hospital.dto.endereco.AlterarEnderecoDto;
+import br.com.fiap.system.hospital.dto.endereco.DetalhesEnderecoDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,4 +34,23 @@ public class Enderecos {
 
     @OneToOne(mappedBy = "endereco")
     private Pacientes paciente;
+
+    public Enderecos(DetalhesEnderecoDto dto) {
+        this.logradouro = dto.logradouro();
+        this.numero = dto.numero();
+        this.bairro = dto.bairro();
+    }
+
+    public void alterar(AlterarEnderecoDto dto) {
+        if(bairro != null) {
+            this.bairro = dto.bairro();
+        }
+        if(logradouro != null) {
+            this.logradouro = dto.logradouro();
+        }
+        if(numero != null) {
+            this.numero = dto.numero();
+        }
+
+    }
 }

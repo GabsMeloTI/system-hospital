@@ -35,6 +35,7 @@ public class Medicos {
     @OneToMany(mappedBy = "medico")
     private List<Consultas> consultas;
 
-    @OneToMany(mappedBy = "medico")
-    private List<Especialidade> especialidades;
+    @OneToOne
+    @JoinColumn(name = "cd_especialidade")
+    private Especialidade especialidade;
 }

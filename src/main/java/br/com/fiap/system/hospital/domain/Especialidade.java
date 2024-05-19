@@ -29,8 +29,7 @@ public class Especialidade {
     @OneToOne(mappedBy = "especialidade")
     private Consultas consulta;
 
-    @ManyToOne
-    @JoinColumn(name = "cd_medico")
+    @OneToOne(mappedBy = "especialidade")
     private Medicos medico;
 
 }
