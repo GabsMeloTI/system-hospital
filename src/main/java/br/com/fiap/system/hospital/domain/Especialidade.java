@@ -1,5 +1,7 @@
 package br.com.fiap.system.hospital.domain;
 
+import br.com.fiap.system.hospital.dto.especialidade.AlterarEspecialidadeDto;
+import br.com.fiap.system.hospital.dto.especialidade.DetalhesEspecialidadeDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,4 +34,13 @@ public class Especialidade {
     @OneToOne(mappedBy = "especialidade")
     private Medicos medico;
 
+    public Especialidade(DetalhesEspecialidadeDto dto) {
+        nome = dto.nome();
+    }
+
+    public void alterar(AlterarEspecialidadeDto dto) {
+        if (nome != null) {
+            this.nome = dto.nome();
+        }
+    }
 }

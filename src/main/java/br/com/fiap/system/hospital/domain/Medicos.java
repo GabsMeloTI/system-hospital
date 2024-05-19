@@ -1,5 +1,9 @@
 package br.com.fiap.system.hospital.domain;
 
+import br.com.fiap.system.hospital.dto.medico.AlterarMedicoDto;
+import br.com.fiap.system.hospital.dto.medico.CadastrarMedicoDto;
+import br.com.fiap.system.hospital.dto.medico.DetalhesMedicoDto;
+import br.com.fiap.system.hospital.dto.paciente.AlterarPacienteDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -38,4 +43,23 @@ public class Medicos {
     @OneToOne
     @JoinColumn(name = "cd_especialidade")
     private Especialidade especialidade;
+
+    public Medicos(CadastrarMedicoDto dto) {
+        this.nome = dto.nome();
+        this.telefone = dto.telefone();
+        this.email = dto.email();
+        this.especialidade = new Especialidade(dto.especialidade());
+    }
+
+    public void alterarDados(AlterarMedicoDto dto) {
+        if (nome != null) {
+            this.nome = dto.nome();
+        }
+        if (telefone != null) {
+            this.telefone = dto.telefone();
+        }
+        if (email != null) {
+            this.email = dto.email();
+        }
+    }
 }

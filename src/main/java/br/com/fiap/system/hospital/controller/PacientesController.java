@@ -44,7 +44,7 @@ public class PacientesController {
         Enderecos endereco = new Enderecos(dto.endereco());
         enderecoRepository.save(endereco);
 
-        Pacientes paciente = new Pacientes(dto);
+        var paciente = new Pacientes(dto);
         paciente.setEndereco(endereco);
         pacienteRepository.save(paciente);
 
