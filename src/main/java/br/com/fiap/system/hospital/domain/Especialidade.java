@@ -35,7 +35,7 @@ public class Especialidade {
     private Medicos medico;
 
     public Especialidade(DetalhesEspecialidadeDto dto) {
-        nome = dto.nome();
+        this.nome = dto.nome();
     }
 
     public void alterar(AlterarEspecialidadeDto dto) {

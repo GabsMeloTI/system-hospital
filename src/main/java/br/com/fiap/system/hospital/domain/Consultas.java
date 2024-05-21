@@ -1,5 +1,7 @@
 package br.com.fiap.system.hospital.domain;
 
+import br.com.fiap.system.hospital.dto.consulta.AlterarConsultaDto;
+import br.com.fiap.system.hospital.dto.consulta.CadastrarConsultaDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -48,4 +50,25 @@ public class Consultas {
 
     @OneToMany(mappedBy = "consulta")
     private List<ReceitaMedica> receitaMedicas;
+
+    public Consultas(CadastrarConsultaDto dto, Pacientes paciente, Medicos medico, Especialidade especialidade) {
+        this.dataConsulta = dto.dataConsulta();
+        this.horaConsulta = dto.horaConsulta();
+        this.motivoConsulta = dto.motivoConsulta();
+        this.paciente = paciente;
+        this.medico = medico;
+        this.especialidade = especialidade;
+    }
+
+    public void alterar(AlterarConsultaDto dto) {
+        if (dataConsulta != null) {
+            this.dataConsulta = dto.dataConsulta();
+        }
+        if (horaConsulta != null) {
+            this.horaConsulta = dto.horaConsulta();
+        }
+        if (motivoConsulta != null) {
+            this.motivoConsulta = dto.motivoConsulta();
+        }
+    }
 }
