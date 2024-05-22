@@ -32,6 +32,14 @@ public class PacientesController {
     private EnderecoRepository enderecoRepository;
 
 
+    @GetMapping("pesquisar-por-nome")
+    public ResponseEntity<Page<DetalhesPacienteDto>> pesquisaPorNome(@RequestParam("caracteres") String caracteres, Pageable pageable) {
+        var page = pacienteRepository.pesquisarNomeDePacientes(caracteres, pageable).map(DetalhesPacienteDto::new);
+        return ResponseEntity.ok(page);
+    }
+
+
+
     @GetMapping
     public ResponseEntity<Page<DetalhesPacienteDto>> listagem(Pageable pageable) {
         var page = pacienteRepository.findAll(pageable).map(DetalhesPacienteDto::new);

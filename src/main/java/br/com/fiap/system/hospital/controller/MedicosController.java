@@ -31,6 +31,12 @@ public class MedicosController {
         this.especialidadeRepository = especialidadeRepository;
     }
 
+    @GetMapping("pesquisar-por-nome")
+    public ResponseEntity<Page<DetalhesMedicoDto>> pesquisaPorNome(@RequestParam("caracteres") String caracteres, Pageable pageable) {
+        var page =  medicoRepository.pesquisarNomeDeMedicos(caracteres, pageable).map(DetalhesMedicoDto::new);
+        return ResponseEntity.ok(page);
+    }
+
     @GetMapping
     public ResponseEntity<Page<DetalhesMedicoDto>> listagem(Pageable pageable) {
         var page = medicoRepository.findAll(pageable).map(DetalhesMedicoDto::new);

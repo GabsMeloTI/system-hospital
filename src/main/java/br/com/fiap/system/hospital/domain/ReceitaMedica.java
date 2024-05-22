@@ -1,5 +1,7 @@
 package br.com.fiap.system.hospital.domain;
 
+import br.com.fiap.system.hospital.dto.receita.AlterarReceitaDto;
+import br.com.fiap.system.hospital.dto.receita.CadastrarReceitaDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,4 +35,24 @@ public class ReceitaMedica {
     @ManyToOne
     @JoinColumn(name = "cd_consulta")
     private Consultas consulta;
+
+
+    public ReceitaMedica(CadastrarReceitaDto dto, Consultas consultas) {
+        this.nome = dto.nome();
+        this.dosagem = dto.dosagem();
+        this.instrucaoUso = dto.instrucaoUso();
+        this.consulta = consultas;
+    }
+
+    public void alterarDados(AlterarReceitaDto dto) {
+        if(nome != null) {
+            this.nome = dto.nome();
+        }
+        if(dosagem != null) {
+            this.dosagem = dto.dosagem();
+        }
+        if(instrucaoUso != null) {
+            this.instrucaoUso = dto.instrucaoUso();
+        }
+    }
 }
