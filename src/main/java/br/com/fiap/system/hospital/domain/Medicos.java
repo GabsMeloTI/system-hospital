@@ -31,6 +31,9 @@ public class Medicos {
     @Column(name = "nm_medico", nullable = false, length = 100)
     private String nome;
 
+    @Column(name = "ds_genero", nullable = false, length = 50)
+    private String genero;
+
     @Column(name = "nr_telefone", nullable = false, length = 11)
     private String telefone;
 
@@ -46,6 +49,7 @@ public class Medicos {
 
     public Medicos(CadastrarMedicoDto dto) {
         this.nome = dto.nome();
+        this.genero = dto.genero();
         this.telefone = dto.telefone();
         this.email = dto.email();
         this.especialidade = new Especialidade(dto.especialidade());
@@ -54,6 +58,9 @@ public class Medicos {
     public void alterarDados(AlterarMedicoDto dto) {
         if (nome != null) {
             this.nome = dto.nome();
+        }
+        if (genero != null) {
+            this.genero = dto.genero();
         }
         if (telefone != null) {
             this.telefone = dto.telefone();

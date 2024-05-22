@@ -6,6 +6,7 @@ import br.com.fiap.system.hospital.domain.Medicos;
 import br.com.fiap.system.hospital.dto.consulta.AlterarConsultaDto;
 import br.com.fiap.system.hospital.dto.consulta.CadastrarConsultaDto;
 import br.com.fiap.system.hospital.dto.consulta.DetalhesConsultaDto;
+import br.com.fiap.system.hospital.dto.consulta.RetornoTotalConsultas;
 import br.com.fiap.system.hospital.dto.medico.CadastrarMedicoDto;
 import br.com.fiap.system.hospital.dto.medico.DetalhesMedicoDto;
 import br.com.fiap.system.hospital.repository.ConsultaRepository;
@@ -19,6 +20,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.core.Local;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -45,6 +47,21 @@ public class ConsultasController {
 
     @Autowired
     private EspecialidadeRepository especialidadeRepository;
+
+    @GetMapping("total-consultas-dia")
+    public ResponseEntity<RetornoTotalConsultas> total(@RequestParam("diaConsulta") LocalDate diaConsulta) {
+        var page = consultaRepository.totalConsultasAoDia(diaConsulta);
+        return ResponseEntity.ok(new RetornoTotalConsultas(diaConsulta, page));
+
+    }
+
+    @GetMapping("pesquisa-por-data")
+    public ResponseEntity<Page<DetalhesConsultaDto>> pesquisaData(@RequestParam("inicio")LocalDate inicio, @RequestParam("fim") LocalDate fim, Pageable pageable) {
+        var page = consultaRepository.pesquisaEntreDatasConsultas(inicio, fim, pageable).map(DetalhesConsultaDto::new);
+        return ResponseEntity.ok(page);
+
+    }
+
     @GetMapping
     public ResponseEntity<Page<DetalhesConsultaDto>> listagem(Pageable pageable) {
         var page = consultaRepository.findAll(pageable).map(DetalhesConsultaDto::new);

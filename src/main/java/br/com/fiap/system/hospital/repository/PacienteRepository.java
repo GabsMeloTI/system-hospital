@@ -12,9 +12,11 @@ import java.time.LocalDate;
 
 public interface PacienteRepository extends JpaRepository<Pacientes, Long>{
 
-    @Query("from Pacientes p where lower(p.nome) like lower('%', :caracteres, '%')")
+    @Query("from Pacientes p where lower(p.nome) like lower(concat('%', :caracteres, '%'))")
     Page<Pacientes> pesquisarNomeDePacientes(@Param("caracteres") String caracteres, Pageable pageable);
 
-    //@Query("from Pacientes p where p.dt_nascimento between :inicio and :fim")
-    //Page<Pacientes> pesquisaEntreDatasDeNascimento(@Param("inicio") LocalDate inicio, @Param("fim") LocalDate fim, Pageable pageable);
+    @Query("from Pacientes p where p.dataNascimento between :inicio and :fim")
+    Page<Pacientes> pesquisaEntreDatasDeNascimento(@Param("inicio") LocalDate inicio, @Param("fim") LocalDate fim, Pageable pageable);
+
+
 }

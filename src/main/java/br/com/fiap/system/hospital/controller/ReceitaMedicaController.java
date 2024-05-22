@@ -1,6 +1,7 @@
 package br.com.fiap.system.hospital.controller;
 
 
+import br.com.fiap.system.hospital.domain.Pacientes;
 import br.com.fiap.system.hospital.domain.ReceitaMedica;
 import br.com.fiap.system.hospital.dto.receita.AlterarReceitaDto;
 import br.com.fiap.system.hospital.dto.receita.CadastrarReceitaDto;
@@ -23,6 +24,13 @@ public class ReceitaMedicaController {
 
     @Autowired
     private ConsultaRepository consultaRepository;
+
+
+    @GetMapping("pesquisa-paciente-remedio")
+    public ResponseEntity<Page<DetalhesReceitaDto>> pesquisarPorNomePaciente(@RequestParam("nome") String nome, Pageable pageable) {
+        var page = receitaMedicaRepository.pesquisarPorNome(nome, pageable).map(DetalhesReceitaDto::new);
+        return ResponseEntity.ok(page);
+    }
 
     @GetMapping
     public ResponseEntity<Page<DetalhesReceitaDto>> listagem(Pageable pageable) {

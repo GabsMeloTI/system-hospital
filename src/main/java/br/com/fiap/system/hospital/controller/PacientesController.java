@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -38,6 +39,11 @@ public class PacientesController {
         return ResponseEntity.ok(page);
     }
 
+    @GetMapping("pesquisa-por-data")
+    public ResponseEntity<Page<DetalhesPacienteDto>> pesquisaData(@RequestParam("inicio") LocalDate inicio, @RequestParam("fim") LocalDate fim, Pageable pageable) {
+        var page = pacienteRepository.pesquisaEntreDatasDeNascimento(inicio, fim, pageable).map(DetalhesPacienteDto::new);
+        return ResponseEntity.ok(page);
+    }
 
 
     @GetMapping

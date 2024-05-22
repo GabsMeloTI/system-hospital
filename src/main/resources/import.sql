@@ -75,38 +75,28 @@ INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (17, 'U
 INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (18, 'Radiologia');
 INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (19, 'Oncologia');
 INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (20, 'Patologia');
-INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (21, 'Ginecologia Oncológica');
-INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (22, 'Mastologia');
-INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (23, 'Endocrinologia Pediátrica');
-INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (24, 'Pneumologia');
-INSERT INTO cp_especialidade (cd_especialidade, nm_especialidade) VALUES (25, 'Alergologia');
 
 --Medicos
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (1, 'Dr. Afonso Medeiros', '11999990026', 'afonso.medeiros@hospital.com', 1);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (2, 'Dr. Beatriz Figueira', '11999990027', 'beatriz.figueira@hospital.com', 2);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (3, 'Dr. Carlos Soares', '11999990028', 'carlos.soares@hospital.com', 3);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (4, 'Dr. Daniela Fontes', '11999990029', 'daniela.fontes@hospital.com', 4);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (5, 'Dr. Eduardo Pinto', '11999990030', 'eduardo.pinto@hospital.com', 5);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (6, 'Dr. Fernanda Moura', '11999990031', 'fernanda.moura@hospital.com', 6);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (7, 'Dr. Guilherme Neves', '11999990032', 'guilherme.neves@hospital.com', 7);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (8, 'Dr. Helena Costa', '11999990033', 'helena.costa@hospital.com', 8);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (9, 'Dr. Igor Ferreira', '11999990034', 'igor.ferreira@hospital.com', 9);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (10, 'Dr. Júlia Rocha', '11999990035', 'julia.rocha@hospital.com', 10);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (11, 'Dr. Kleber Santos', '11999990036', 'kleber.santos@hospital.com', 11);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (12, 'Dr. Larissa Gomes', '11999990037', 'larissa.gomes@hospital.com', 12);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (13, 'Dr. Marcelo Lima', '11999990038', 'marcelo.lima@hospital.com', 13);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (14, 'Dr. Natália Cunha', '11999990039', 'natalia.cunha@hospital.com', 14);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (15, 'Dr. Otávio Ramos', '11999990040', 'otavio.ramos@hospital.com', 15);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (16, 'Dr. Paula Souza', '11999990041', 'paula.souza@hospital.com', 16);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (17, 'Dr. Rodrigo Borges', '11999990042', 'rodrigo.borges@hospital.com', 17);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (18, 'Dr. Silvia Campos', '11999990043', 'silvia.campos@hospital.com', 18);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (19, 'Dr. Tiago Martins', '11999990044', 'tiago.martins@hospital.com', 19);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (20, 'Dr. Ubirajara Teixeira', '11999990045', 'ubirajara.teixeira@hospital.com', 20);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (21, 'Dr. Vera Lúcia', '11999990046', 'vera.lucia@hospital.com', 21);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (22, 'Dr. Wagner Ferreira', '11999990047', 'wagner.ferreira@hospital.com', 22);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (23, 'Dr. Xênia Moura', '11999990048', 'xenia.moura@hospital.com', 23);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (24, 'Dr. Yuri Almeida', '11999990049', 'yuri.almeida@hospital.com', 24);
-INSERT INTO cp_medicos (cd_medico, nm_medico, nr_telefone, ds_email, cd_especialidade) VALUES (25, 'Dr. Zuleika Lima', '11999990050', 'zuleika.lima@hospital.com', 25);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (1, 'Dr. Afonso Medeiros', 'MASCULINO', '11999990026', 'afonso.medeiros@hospital.com', 1);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (2, 'Dr. Beatriz Figueira', 'FEMININO', '11999990027', 'beatriz.figueira@hospital.com', 2);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (3, 'Dr. Carlos Soares', 'MASCULINO', '11999990028', 'carlos.soares@hospital.com', 3);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (4, 'Dr. Daniela Fontes', 'FEMININO', '11999990029', 'daniela.fontes@hospital.com', 4);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (5, 'Dr. Eduardo Pinto', 'MASCULINO', '11999990030', 'eduardo.pinto@hospital.com', 5);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (6, 'Dr. Fernanda Moura', 'FEMININO', '11999990031', 'fernanda.moura@hospital.com', 6);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (7, 'Dr. Guilherme Neves', 'MASCULINO', '11999990032', 'guilherme.neves@hospital.com', 7);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (8, 'Dr. Helena Costa', 'FEMININO', '11999990033', 'helena.costa@hospital.com', 8);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (9, 'Dr. Igor Ferreira', 'MASCULINO', '11999990034', 'igor.ferreira@hospital.com', 9);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (10, 'Dr. Júlia Rocha', 'FEMININO', '11999990035', 'julia.rocha@hospital.com', 10);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (11, 'Dr. Kleber Santos', 'MASCULINO', '11999990036', 'kleber.santos@hospital.com', 11);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (12, 'Dr. Larissa Gomes', 'FEMININO', '11999990037', 'larissa.gomes@hospital.com', 12);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (13, 'Dr. Marcelo Lima', 'MASCULINO', '11999990038', 'marcelo.lima@hospital.com', 13);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (14, 'Dr. Natália Cunha', 'FEMININO', '11999990039', 'natalia.cunha@hospital.com', 14);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (15, 'Dr. Otávio Ramos', 'MASCULINO', '11999990040', 'otavio.ramos@hospital.com', 15);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (16, 'Dr. Paula Souza', 'FEMININO', '11999990041', 'paula.souza@hospital.com', 16);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (17, 'Dr. Rodrigo Borges', 'MASCULINO', '11999990042', 'rodrigo.borges@hospital.com', 17);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (18, 'Dr. Silvia Campos', 'FEMININO', '11999990043', 'silvia.campos@hospital.com', 18);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (19, 'Dr. Tiago Martins', 'MASCULINO', '11999990044', 'tiago.martins@hospital.com', 19);
+INSERT INTO cp_medicos (cd_medico, nm_medico, ds_genero, nr_telefone, ds_email, cd_especialidade) VALUES (20, 'Dr. Ubirajara Teixeira', 'MASCULINO', '11999990045', 'ubirajara.teixeira@hospital.com', 20);
 
 
 --Consultas
@@ -130,10 +120,6 @@ INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade
 INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade, dt_consulta, hr_consulta, ds_motivo_consulta) VALUES (18, 18, 18, 18, TO_DATE('2024-05-18', 'YYYY-MM-DD'), '17:30', 'Exames radiológicos');
 INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade, dt_consulta, hr_consulta, ds_motivo_consulta) VALUES (19, 19, 19, 19, TO_DATE('2024-05-19', 'YYYY-MM-DD'), '18:30', 'Consulta oncológica');
 INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade, dt_consulta, hr_consulta, ds_motivo_consulta) VALUES (20, 20, 20, 20, TO_DATE('2024-05-20', 'YYYY-MM-DD'), '19:30', 'Consulta de patologia');
-INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade, dt_consulta, hr_consulta, ds_motivo_consulta) VALUES (21, 21, 21, 21, TO_DATE('2024-05-21', 'YYYY-MM-DD'), '20:00', 'Consulta ginecológica oncológica');
-INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade, dt_consulta, hr_consulta, ds_motivo_consulta) VALUES (22, 22, 22, 22, TO_DATE('2024-05-22', 'YYYY-MM-DD'), '21:00', 'Consulta de mastologia');
-INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade, dt_consulta, hr_consulta, ds_motivo_consulta) VALUES (23, 23, 23, 23, TO_DATE('2024-05-23', 'YYYY-MM-DD'), '08:00', 'Consulta endocrinológica pediátrica');
-INSERT INTO cp_consultas (cd_consultas, cd_paciente, cd_medico, cd_especialidade, dt_consulta, hr_consulta, ds_motivo_consulta) VALUES (24, 24, 24, 24, TO_DATE('2024-05-24', 'YYYY-MM-DD'), '09:30', 'Consulta pneumológica');
 
 
 
@@ -158,8 +144,3 @@ INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, d
 INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (18, 18, 'Cloridrato de Paroxetina', '20mg', 'Tomar 1 comprimido ao dia');
 INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (19, 19, 'Amitriptilina', '25mg', 'Tomar 1 comprimido ao dia antes de dormir');
 INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (20, 20, 'Alprazolam', '0,5mg', 'Tomar 1 comprimido 3 vezes ao dia conforme necessário');
-INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (21, 21, 'Olanzapina', '10mg', 'Tomar 1 comprimido ao dia');
-INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (22, 22, 'Piroxicam', '20mg', 'Tomar 1 comprimido ao dia após as refeições');
-INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (23, 23, 'Hidroclorotiazida', '25mg', 'Tomar 1 comprimido ao dia após as refeições');
-INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (24, 24, 'Ácido Acetilsalicílico', '100mg', 'Tomar 1 comprimido ao dia após o almoço');
-INSERT INTO cp_receita_medica (cd_receita_medica, cd_consulta, nm_medicamento, ds_dosagem, ds_instrucao_uso) VALUES (25, 25, 'Dorflex', '1 comprimido', 'Tomar 1 comprimido de 6 em 6 horas conforme necessário');

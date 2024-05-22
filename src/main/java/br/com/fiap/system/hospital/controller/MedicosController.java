@@ -31,6 +31,12 @@ public class MedicosController {
         this.especialidadeRepository = especialidadeRepository;
     }
 
+    @GetMapping("pesquisar-por-genero")
+    public ResponseEntity<Page<DetalhesMedicoDto>> pesquisaPorGenero(@RequestParam("genero") String genero, @RequestParam("nome") String nome,Pageable pageable) {
+        var page =  medicoRepository.pesquisarPorGeneroEspecialidade(genero, nome, pageable).map(DetalhesMedicoDto::new);
+        return ResponseEntity.ok(page);
+    }
+
     @GetMapping("pesquisar-por-nome")
     public ResponseEntity<Page<DetalhesMedicoDto>> pesquisaPorNome(@RequestParam("caracteres") String caracteres, Pageable pageable) {
         var page =  medicoRepository.pesquisarNomeDeMedicos(caracteres, pageable).map(DetalhesMedicoDto::new);
