@@ -69,20 +69,7 @@ If you encounter issues, make sure:
 
 Refer to the [Spring Boot documentation](https://spring.io/projects/spring-boot) for additional help.
 
-## 🗒️ To-Do Features
-
-- **Patient Records Management**: Enhance patient records and history management.
-- **Appointment Scheduling**: Implement advanced scheduling features.
-- **Billing System Integration**: Integrate a billing system for handling patient charges.
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit a pull request or open an issue to discuss new features or improvements.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Thank you for exploring **System Hospital**! We aim to provide a reliable and efficient solution for hospital management and patient care. 🏥🚀
